@@ -14,10 +14,11 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "format": "yarn lint --fix",
+    "lint": "eslint . --ext ts --ext tsx --ext js"
   },
   "peerDependencies": {
     "react": ">=16"
