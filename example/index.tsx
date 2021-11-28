@@ -3,7 +3,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { getColor } from '../.';
 
-import "../css/_index.css"
+import "../css/index.css"
 
 const App = () => {
   return (
