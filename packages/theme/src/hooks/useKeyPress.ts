@@ -8,6 +8,10 @@ export function useKeyPress(key: string, callback: () => void) {
       e.key === key && callback()
     },
     [],
-    { eventOptions: { passive: true } }
+    {
+      eventOptions: {
+        passive: true
+      }
+    }
   )
 }

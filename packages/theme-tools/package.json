@@ -1,0 +1,20 @@
+{
+  "name": "@raslib/theme-tools",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "main": "dist/raslib-theme-tools.cjs.js",
+  "module": "dist/raslib-theme-tools.esm.js",
+  "types": "dist/raslib-theme-tools.cjs.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "author": "Lesley Chang",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@ctrl/tinycolor": "^3.4.0"
+  }
+}

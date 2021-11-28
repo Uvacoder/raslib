@@ -1,6 +1,6 @@
 *.log
 .DS_Store
-node_modules
+node_modules/
 .cache
 dist
 
@@ -18,3 +18,10 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+
+
+packages/*/coverage
+packages/*/dist
+packages/*/node_modules
+

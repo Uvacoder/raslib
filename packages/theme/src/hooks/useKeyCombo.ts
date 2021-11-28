@@ -17,7 +17,11 @@ export function useKeyCombo(combo: string, callback: () => void) {
       setKeysPressed((prev) => prev.slice(-5).concat([e.key]))
     },
     [],
-    { eventOptions: { passive: true } }
+    {
+      eventOptions: {
+        passive: true
+      }
+    }
   )
 
   useEffect(() => {
