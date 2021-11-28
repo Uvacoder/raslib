@@ -59,7 +59,7 @@ export const palette = {
     800: '#3730a3',
     900: '#312e81'
   }
-} 
+} as const
 
 /* Branding colors */
 export const brand = {

@@ -13,7 +13,7 @@
     // Configuration for TypeScript files
     {
       "files": ["**/*.ts", "**/*.tsx"],
-      "plugins": ["@typescript-eslint", "unused-imports"],
+      "plugins": ["@typescript-eslint", "import", "unused-imports", "sonarjs", "simple-import-sort", "prettier"],
       "extends": [
         "airbnb-typescript",
         "plugin:prettier/recommended"
@@ -57,7 +57,7 @@
         "no-prototype-builtins": 0,
         "jsx-a11y/alt-text": 0,
         "@typescript-eslint/no-throw-literal": "off",
-        "@typescript-eslint/no-unused-expressions":1,
+        "@typescript-eslint/no-unused-expressions": 1,
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": [
           "error",
