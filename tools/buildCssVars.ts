@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const cssVarsFilePath = path.resolve(__dirname, "../src/theme/css/variables.css");
+const cssVarsFilePath = path.resolve(__dirname, "..//theme/css/variables.css");
 
 type Dict<T = string> = { [key: string]: T }
 
