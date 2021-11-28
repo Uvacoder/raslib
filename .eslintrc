@@ -13,7 +13,7 @@
     // Configuration for TypeScript files
     {
       "files": ["**/*.ts", "**/*.tsx"],
-      "plugins": ["@typescript-eslint", "import", "unused-imports", "sonarjs", "simple-import-sort", "prettier"],
+      "plugins": ["@typescript-eslint", "import", "unused-imports", "react", "react-hooks", "sonarjs", "simple-import-sort", "prettier"],
       "extends": [
         "airbnb-typescript",
         "plugin:prettier/recommended"
