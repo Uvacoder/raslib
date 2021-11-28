@@ -30,6 +30,9 @@
   "name": "raslib",
   "author": "Lesley Chang",
   "module": "dist/raslib.esm.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "size-limit": [
     {
       "path": "dist/raslib.cjs.production.min.js",
