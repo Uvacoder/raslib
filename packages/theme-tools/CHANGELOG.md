@@ -1,5 +1,13 @@
 # @rasreee/theme-tools
 
+## 7.0.3
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+  - @rasreee/theme@9.0.0
+
 ## 7.0.2
 
 ### Patch Changes

@@ -1,4 +1,4 @@
-import { Colors } from './types'
+import { Colors } from './colors.types'
 
 const greys = {
   grey5: '#f9fafb',

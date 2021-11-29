@@ -8,6 +8,7 @@ export interface Theme {
   fontSizes: typeof fontSizes
   radii: typeof radii
 }
+
 export const theme: Theme = {
   colors,
   fontWeights,

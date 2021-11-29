@@ -9,4 +9,4 @@ const getPlural = (val: ThemeToken) => {
   return `${val}s` as const
 }
 
-export type ThemeTokens = ReturnType<typeof getPlural>
+export type ThemeTokenAsPlural = ReturnType<typeof getPlural>

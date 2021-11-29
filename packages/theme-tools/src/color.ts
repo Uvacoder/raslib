@@ -1,10 +1,7 @@
 import { TinyColor } from '@ctrl/tinycolor'
-import { ThemeColorKey } from '@rasreee/theme'
+import { Dict, get } from '@rasreee/utils'
 
-export type ColorLevel = 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
-
-type Dict<T = any> = Record<string, T>
-
+import { ColorLevel } from './types'
 /**
  * Darken a specified color
  * @param color - the color in hex, rgb, or hsl
@@ -19,7 +16,7 @@ export const darken = (color: string, amount: number) => {
  * @param color - the color in hex, rgb, or hsl
  * @param amount - the amount to lighten (0-100)
  */
-export const lighten = (color: string, amount: number) => (theme: Dict) =>
+export const lighten = (color: string, amount: number) => () =>
   new TinyColor(color).lighten(amount).toHexString()
 
 /**
@@ -36,37 +33,15 @@ function getColorConfigPath<ColorConfigKey extends string = string>(
 
 export type ColorConfigPath = ReturnType<typeof getColorConfigPath>
 
-export type ThemeObj<ColorConfigKey extends string = string> = {
-  colors: Record<ColorConfigKey, Record<ColorLevel, string>>
-  fontWeights: Dict<number>
-  fontSizes: Dict<string>
-  radii: Dict<string>
-}
+/**
+ * Get the color raw value from theme
+ * @param theme - the theme object
+ * @param color - the color path ("green.200")
+ * @param fallback - the fallback color
+ */
+export const getColor = (theme: Dict, color: string, fallback?: string) => {
+  const hex = get(theme, `colors.${color}`, color)
+  const { isValid } = new TinyColor(hex)
 
-const isColorConfigPath = (o: string): o is ColorConfigPath => {
-  return o.includes('.')
-}
-
-const keys = ['gray', 'red', 'blue', 'green', 'indigo']
-
-const isThemeColorKey = (o: string): o is ThemeColorKey => {
-  return keys.includes(o)
-}
-
-export function getColor<ColorKey extends string = string>(arg0: ColorKey, arg1?: ColorLevel) {
-  return (theme: ThemeObj) => {
-    if (isColorConfigPath(arg0)) {
-      const splits = arg0.split('.')
-      const key = splits.at(0)!
-      // eslint-disable-next-line radix
-      const level = parseInt(splits.at(1)!)
-
-      return theme[key][level]
-    }
-    if (isThemeColorKey(arg0) && arg1) {
-      return theme.colors[arg0][arg1]
-    }
-
-    throw new Error(`Invalid args for getColor: ${JSON.stringify({ arg0, arg1 })}`)
-  }
+  return isValid ? hex : fallback
 }

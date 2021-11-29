@@ -1,5 +1,15 @@
 # @rasreee/theme
 
+## 9.0.0
+
+### Major Changes
+
+- colors
+
+### Patch Changes
+
+- update colors
+
 ## 8.1.0
 
 ### Minor Changes
