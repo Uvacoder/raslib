@@ -39,7 +39,11 @@ export type ColorConfigPath = ReturnType<typeof getColorConfigPath>
  * @param color - the color path ("green.200")
  * @param fallback - the fallback color
  */
-export const getColor = (theme: Dict, color: string, fallback?: string) => {
+export function getColor<ThemeType extends { colors: Dict } = { colors: Dict }>(
+  theme: ThemeType,
+  color: keyof ThemeType['colors'],
+  fallback?: string
+): string {
   const hex = get(theme, `colors.${color}`, color)
   const { isValid } = new TinyColor(hex)
 

@@ -1,5 +1,11 @@
 # @rasreee/theme
 
+## 9.0.1
+
+### Patch Changes
+
+- fix getColor method and theme type exports
+
 ## 9.0.0
 
 ### Major Changes

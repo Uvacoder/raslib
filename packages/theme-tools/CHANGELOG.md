@@ -1,5 +1,14 @@
 # @rasreee/theme-tools
 
+## 7.0.4
+
+### Patch Changes
+
+- fix getColor method and theme type exports
+- Updated dependencies
+  - @rasreee/theme@9.0.1
+  - @rasreee/utils@2.0.2
+
 ## 7.0.3
 
 ### Patch Changes

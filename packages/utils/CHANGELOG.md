@@ -1,5 +1,11 @@
 # @rasreee/utils
 
+## 2.0.2
+
+### Patch Changes
+
+- fix getColor method and theme type exports
+
 ## 2.0.1
 
 ### Patch Changes
