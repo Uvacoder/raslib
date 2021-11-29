@@ -2,9 +2,9 @@
   "name": "@rasreee/theme-tools",
   "version": "1.0.0",
   "sideEffects": false,
-  "main": "dist/raslib-theme-tools.cjs.js",
-  "module": "dist/raslib-theme-tools.esm.js",
-  "types": "dist/raslib-theme-tools.cjs.d.ts",
+  "main": "dist/rasreee-theme-tools.cjs.js",
+  "module": "dist/rasreee-theme-tools.esm.js",
+  "types": "dist/rasreee-theme-tools.cjs.d.ts",
   "files": [
     "dist",
     "src"

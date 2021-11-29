@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "author": "Lesley Chang",
   "license": "MIT",
-  "main": "dist/raslib-theme.cjs.js",
-  "types": "dist/raslib-theme.cjs.d.ts",
-  "module": "dist/raslib-theme.esm.js",
+  "main": "dist/rasreee-theme.cjs.js",
+  "types": "dist/rasreee-theme.cjs.d.ts",
+  "module": "dist/rasreee-theme.esm.js",
   "files": [
     "dist",
     "src"
