@@ -1,5 +1,6 @@
 export * from './border'
 export * from './color.utils'
 export * from './colors'
+export * from './css-vars'
 export * from './theme'
 export * from './typography'

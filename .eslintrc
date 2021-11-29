@@ -13,11 +13,17 @@
     // Configuration for TypeScript files
     {
       "files": ["**/*.ts", "**/*.tsx"],
-      "plugins": ["@typescript-eslint", "import", "unused-imports", "react", "react-hooks", "sonarjs", "simple-import-sort", "prettier"],
-      "extends": [
-        "airbnb-typescript",
-        "plugin:prettier/recommended"
+      "plugins": [
+        "@typescript-eslint",
+        "import",
+        "unused-imports",
+        "react",
+        "react-hooks",
+        "sonarjs",
+        "simple-import-sort",
+        "prettier"
       ],
+      "extends": ["airbnb-typescript", "plugin:prettier/recommended"],
       "parserOptions": {
         "project": "./tsconfig.json"
       },
@@ -36,11 +42,13 @@
           "error",
           {
             "groups": ["builtin", "external", "internal"],
-            "pathGroups": [{
-              "pattern": "react",
-              "group": "external",
-              "position": "before"
-            }],
+            "pathGroups": [
+              {
+                "pattern": "react",
+                "group": "external",
+                "position": "before"
+              }
+            ],
             "pathGroupsExcludedImportTypes": ["react"],
             "newlines-between": "always",
             "alphabetize": {
@@ -102,17 +110,16 @@
         "operator-linebreak": "error",
         "linebreak-style": "error",
         "object-shorthand": "error",
-        "object-curly-newline": ["error", {
-          "ObjectExpression": "always",
-          "ObjectPattern": {
-            "multiline": true
-          },
-          "ImportDeclaration": "never",
-          "ExportDeclaration": {
-            "multiline": true,
-            "minProperties": 3
+        "object-curly-newline": [
+          "error",
+          {
+            "ImportDeclaration": "never",
+            "ExportDeclaration": {
+              "multiline": true,
+              "minProperties": 3
+            }
           }
-        }],
+        ],
         "object-curly-spacing": ["error", "always"],
         "object-property-newline": [
           "error",
@@ -120,7 +127,7 @@
             "allowAllPropertiesOnSameLine": true
           }
         ],
-        "newline-after-var": "off",
+        "newline-after-var": "error",
         "newline-before-return": "off",
         "newline-per-chained-call": "off",
         "func-call-spacing": "off",
