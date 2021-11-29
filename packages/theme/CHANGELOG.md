@@ -1,5 +1,11 @@
 # @rasreee/theme
 
+## 7.0.0
+
+### Major Changes
+
+- update typings from theme
+
 ## 6.0.0
 
 ### Major Changes

@@ -19,17 +19,21 @@ export function toVarNames(obj: Dict, prefix = '-') {
 
 // converts the nested theme object into a flat object with `--path-to-value` keys
 export function toVars(obj: Dict, prefix = '-') {
-  const vars: Record<CssVarKey, string> = {}
+  const vars: Record<`${string}-${string}`, string> = {}
 
   Object.entries(obj).forEach(([key, value]) => {
     if (typeof value === 'object') {
-      const nestedVars = toVars(value, `${prefix}-${key}`)
+      const cssVar = `${prefix}-${key}` as const
+
+      const nestedVars = toVars(value, cssVar)
 
       Object.entries(nestedVars).forEach(([nestedKey, nestedValue]) => {
         vars[nestedKey] = nestedValue
       })
     } else {
-      vars[`${prefix}-${key}`] = value
+      const varKey = `${prefix}-${key}` as const
+
+      vars[varKey] = value
     }
   })
   return vars
