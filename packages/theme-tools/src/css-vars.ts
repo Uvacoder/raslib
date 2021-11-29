@@ -48,10 +48,7 @@ export const colorCssVariable = {
   '--color-secondary': '#98A9BC',
   '--color-warning': '#FFAB2B',
   '--color-success': '#6DD230',
-  '--color-dark': '#252631',
-  '--color-outline': '#E8ECEF',
-  '--color-bg': '#F2F4F6',
-  '--color-bg-lightest': '#F8FAFB'
+  '--color-dark': '#252631'
 }
 
 const getCssVarKey = (token: ThemeToken, value: ThemeColorKey, level: keyof ColorScale) => {

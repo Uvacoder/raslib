@@ -1,5 +1,11 @@
 # @rasreee/theme
 
+## 8.0.0
+
+### Major Changes
+
+- combine palette and brand theme colors into one object
+
 ## 7.0.0
 
 ### Major Changes

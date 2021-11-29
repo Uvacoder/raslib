@@ -71,13 +71,8 @@ const palette: Record<ThemeColorKey, ColorScale> = {
 const brand = {
   primary: '#4D7CFE',
   danger: '#F16063',
-  secondary: '#98A9BC',
   warning: '#FFAB2B',
-  success: '#6DD230',
-  dark: '#252631',
-  outline: '#E8ECEF',
-  bg: '#F2F4F6',
-  'bg-lightest': '#F8FAFB'
+  success: '#6DD230'
 }
 const colors = { ...palette, ...brand }
 
