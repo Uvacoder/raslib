@@ -1,0 +1,23 @@
+{
+  "name": "@rasreee/utils",
+  "version": "1.0.1",
+  "sideEffects": false,
+  "main": "dist/rasreee-utils.cjs.js",
+  "module": "dist/rasreee-utils.esm.js",
+  "types": "dist/rasreee-utils.cjs.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "author": "Lesley Chang",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "lodash.mergewith": "^4.6.2"
+  },
+  "devDependencies": {
+    "@types/lodash.mergewith": "^4.6.6"
+  }
+}
