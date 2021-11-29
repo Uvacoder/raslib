@@ -11,6 +11,9 @@
   ],
   "author": "Lesley Chang",
   "license": "MIT",
+  "alias": {
+    "@rasreee/theme": "../theme"
+  },
   "publishConfig": {
     "access": "public"
   },

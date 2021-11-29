@@ -50,8 +50,10 @@ export function split<T extends Dict, K extends keyof T>(object: T, keys: K[]) {
 export function get(obj: object, path: string | number, fallback?: any, index?: number) {
   const key = typeof path === 'string' ? path.split('.') : [path]
 
+  // eslint-disable-next-line no-param-reassign
   for (index = 0; index < key.length; index += 1) {
     if (!obj) break
+    // eslint-disable-next-line no-param-reassign
     obj = obj[key[index]]
   }
 
@@ -115,6 +117,7 @@ export function objectFilter<T extends Dict>(object: T, fn: FilterFn<T>) {
   Object.keys(object).forEach((key) => {
     const value = object[key]
     const shouldPass = fn(value, key, object)
+
     if (shouldPass) {
       result[key] = value
     }
@@ -133,6 +136,7 @@ export const objectKeys = <T extends Dict>(obj: T) => Object.keys(obj) as unknow
  */
 export const fromEntries = <T extends unknown>(entries: [string, any][]) =>
   entries.reduce((carry, [key, value]) => {
+    // eslint-disable-next-line no-param-reassign
     carry[key] = value
     return carry
   }, {}) as T

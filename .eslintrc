@@ -34,6 +34,7 @@
             "singleQuote": true
           }
         ],
+        "no-underscore-dangle": 0,
         "react-hooks/exhaustive-deps": 0,
         "react/destructuring-assignment": "off", // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
         "react/require-default-props": "off", // Allow non-defined react props as undefined

@@ -8,11 +8,11 @@ export const fontWeights = {
   bold: 700,
   extrabold: 800,
   black: 900
-} as const
+}
 
 export const fontSizes = {
-  xs: 'var(--txt-xs)',
-  // TODO change remaining values to use CSS variables
+  xxs: '0.625rem',
+  xs: '0.75rem',
   sm: '0.875rem',
   base: '1rem',
   lg: '1.125rem',
@@ -23,4 +23,4 @@ export const fontSizes = {
   '5xl': '3rem',
   '6xl': '3.75rem',
   '7xl': '4.5rem'
-} as const
+}

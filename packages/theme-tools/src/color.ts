@@ -1,6 +1,6 @@
 import { TinyColor } from '@ctrl/tinycolor'
 
-import { ColorKey, ColorScale } from './color.types'
+export type ColorLevel = 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
 
 type Dict<T = any> = Record<string, T>
 
@@ -26,26 +26,38 @@ export const lighten = (color: string, amount: number) => (theme: Dict) =>
  * @param key - the name of the color
  * @param level - the scale of the color you want in terms of lightness / darkness
  */
-const getColorConfigPath = (key: ColorKey, scale: ColorScale) => {
+function getColorConfigPath<ColorConfigKey extends string = string>(
+  key: ColorConfigKey,
+  scale: ColorLevel
+) {
   return `${key}.${scale}` as const
 }
 
 export type ColorConfigPath = ReturnType<typeof getColorConfigPath>
 
-export type ThemeObj = {
-  colors: Record<ColorKey, Record<ColorScale, string>>
+export type ThemeObj<ColorConfigKey extends string = string> = {
+  colors: Record<ColorConfigKey, Record<ColorLevel, string>>
   fontWeights: Dict<number>
   fontSizes: Dict<string>
   radii: Dict<string>
 }
 
-export const getColor = (path: ColorConfigPath) => {
-  return (theme: ThemeObj) => {
-    const splits = path.split('.')
-    const key = splits.at(0)!
-    // eslint-disable-next-line radix
-    const scale = parseInt(splits.at(1)!)
+const isColorConfigPath = (o: string): o is ColorConfigPath => {
+  return o.includes('.')
+}
 
-    return theme[key as ColorKey][scale as ColorScale]
+export function getColor<ColorKey extends string = string>(arg0: ColorKey, arg1?: ColorLevel) {
+  return (theme: ThemeObj) => {
+    if (isColorConfigPath(arg0)) {
+      const splits = arg0.split('.')
+      const key = splits.at(0)!
+      // eslint-disable-next-line radix
+      const level = parseInt(splits.at(1)!)
+
+      return theme[key][level]
+    }
+    if (arg1) {
+      return theme[arg0 as keyof typeof theme][arg1]
+    }
   }
 }

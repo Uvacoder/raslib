@@ -1,4 +1,10 @@
-export const palette = {
+// color level values for a given color scale
+
+import { ThemeColorKey } from './types'
+
+export type ColorScale = { [level in number]: string }
+
+export const palette: Record<ThemeColorKey, ColorScale> = {
   gray: {
     50: '#f9fafb',
     100: '#f3f4f6',
@@ -59,7 +65,7 @@ export const palette = {
     800: '#3730a3',
     900: '#312e81'
   }
-} as const
+}
 
 /* Branding colors */
 export const brand = {
@@ -72,4 +78,4 @@ export const brand = {
   outline: '#E8ECEF',
   bg: '#F2F4F6',
   'bg-lightest': '#F8FAFB'
-} as const
+}

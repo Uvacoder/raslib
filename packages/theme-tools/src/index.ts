@@ -1,2 +1,2 @@
-export * from './color.types'
-export * from './color.utils'
+export * from './color'
+export * from './css-vars'
