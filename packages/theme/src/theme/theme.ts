@@ -1,17 +1,15 @@
 import { radii } from './border'
-import { brand, palette } from './colors'
+import { colors } from './colors'
 import { fontSizes, fontWeights } from './typography'
 
 export interface Theme {
-  colors: typeof palette
-  brand: typeof brand
+  colors: typeof colors
   fontWeights: typeof fontWeights
   fontSizes: typeof fontSizes
   radii: typeof radii
 }
 export const theme: Theme = {
-  colors: palette,
-  brand,
+  colors,
   fontWeights,
   fontSizes,
   radii

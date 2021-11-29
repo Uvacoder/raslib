@@ -1,4 +1,5 @@
 import { TinyColor } from '@ctrl/tinycolor'
+import { ThemeColorKey } from '@rasreee/theme'
 
 export type ColorLevel = 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
 
@@ -46,6 +47,12 @@ const isColorConfigPath = (o: string): o is ColorConfigPath => {
   return o.includes('.')
 }
 
+const keys = ['gray', 'red', 'blue', 'green', 'indigo']
+
+const isThemeColorKey = (o: string): o is ThemeColorKey => {
+  return keys.includes(o)
+}
+
 export function getColor<ColorKey extends string = string>(arg0: ColorKey, arg1?: ColorLevel) {
   return (theme: ThemeObj) => {
     if (isColorConfigPath(arg0)) {
@@ -56,8 +63,10 @@ export function getColor<ColorKey extends string = string>(arg0: ColorKey, arg1?
 
       return theme[key][level]
     }
-    if (arg1) {
-      return theme[arg0 as keyof typeof theme][arg1]
+    if (isThemeColorKey(arg0) && arg1) {
+      return theme.colors[arg0][arg1]
     }
+
+    throw new Error(`Invalid args for getColor: ${JSON.stringify({ arg0, arg1 })}`)
   }
 }

@@ -4,7 +4,7 @@ import { ThemeColorKey } from './types'
 
 export type ColorScale = { [level in number]: string }
 
-export const palette: Record<ThemeColorKey, ColorScale> = {
+const palette: Record<ThemeColorKey, ColorScale> = {
   gray: {
     50: '#f9fafb',
     100: '#f3f4f6',
@@ -68,7 +68,7 @@ export const palette: Record<ThemeColorKey, ColorScale> = {
 }
 
 /* Branding colors */
-export const brand = {
+const brand = {
   primary: '#4D7CFE',
   danger: '#F16063',
   secondary: '#98A9BC',
@@ -79,3 +79,6 @@ export const brand = {
   bg: '#F2F4F6',
   'bg-lightest': '#F8FAFB'
 }
+const colors = { ...palette, ...brand }
+
+export { colors }

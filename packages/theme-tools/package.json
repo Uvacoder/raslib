@@ -18,6 +18,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@ctrl/tinycolor": "^3.4.0"
+    "@ctrl/tinycolor": "^3.4.0",
+    "@rasreee/theme": "^7.0.0"
   }
 }
