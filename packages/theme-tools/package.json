@@ -1,6 +1,6 @@
 {
   "name": "@rasreee/theme-tools",
-  "version": "3.0.0",
+  "version": "6.0.0",
   "sideEffects": false,
   "main": "dist/rasreee-theme-tools.cjs.js",
   "module": "dist/rasreee-theme-tools.esm.js",
