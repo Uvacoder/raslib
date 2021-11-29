@@ -1,6 +1,6 @@
 export type ThemeColorKey = 'gray' | 'red' | 'blue' | 'green' | 'indigo'
 
-export type ThemeToken = 'color' | 'fontWeight' | 'fontSize' | 'borderRadius' | 'brand'
+export type ThemeToken = 'color' | 'fontWeight' | 'fontSize' | 'borderRadius'
 
 const getPlural = (val: ThemeToken) => {
   if (val === 'borderRadius') {

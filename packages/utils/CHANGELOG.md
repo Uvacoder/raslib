@@ -1,5 +1,11 @@
 # @rasreee/utils
 
+## 2.0.1
+
+### Patch Changes
+
+- remove unused colors
+
 ## 2.0.0
 
 ### Major Changes

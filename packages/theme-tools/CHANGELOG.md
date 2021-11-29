@@ -1,5 +1,13 @@
 # @rasreee/theme-tools
 
+## 7.0.2
+
+### Patch Changes
+
+- remove unused colors
+- Updated dependencies
+  - @rasreee/theme@8.1.0
+
 ## 7.0.1
 
 ### Patch Changes

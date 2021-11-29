@@ -1,5 +1,11 @@
 # @rasreee/theme
 
+## 8.1.0
+
+### Minor Changes
+
+- remove unused colors
+
 ## 8.0.0
 
 ### Major Changes
