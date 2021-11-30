@@ -1,10 +1,9 @@
 import '@emotion/react'
 
-import { theme } from '@rasreee/theme'
+import { theme, AppTheme } from '../styles/theme'
 
-type MyTheme = typeof theme
 declare module '@emotion/react' {
-  export interface Theme extends MyTheme {}
+  export interface Theme extends AppTheme {}
 }
 
 declare module 'react' {

@@ -1,4 +1,4 @@
-import { Theme } from './theme'
+import { BaseTheme as Theme } from './theme'
 
 export type ThemeColorKey = keyof Theme['colors']
 export type ThemeArgs =

@@ -10,4 +10,4 @@ export const theme = {
   text: textStyles
 }
 
-export type Theme = typeof theme
+export type BaseTheme = typeof theme
