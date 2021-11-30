@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 
-const fonts = css`
+export const importFontFaces = css`
   @font-face {
     font-family: 'Mulish-Regular';
     src: url('/fonts/Mulish-Regular.woff2') format('woff2');
@@ -43,4 +43,16 @@ const fonts = css`
     font-display: swap;
   }
 `
-export { fonts }
+
+export const PreloadFonts = () => {
+  return (
+    <>
+      <link rel="preload" href="/fonts/Mulish-Regular.woff2" as="font" type="font/woff2" crossOrigin={''} />
+      <link rel="preload" href="/fonts/Mulish-Medium.woff2" as="font" type="font/woff2" crossOrigin={''} />
+      <link rel="preload" href="/fonts/Mulish-Semibold.woff2" as="font" type="font/woff2" crossOrigin={''} />
+      <link rel="preload" href="/fonts/Mulish-Bold.woff2" as="font" type="font/woff2" crossOrigin={''} />
+      <link rel="preload" href="/fonts/Mulish-ExtraBold.woff2" as="font" type="font/woff2" crossOrigin={''} />
+      <link rel="preload" href="/fonts/Mulish-Black.woff2" as="font" type="font/woff2" crossOrigin={''} />
+    </>
+  )
+}
