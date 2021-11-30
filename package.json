@@ -1,16 +1,18 @@
 {
   "version": "4.0.0",
   "name": "@rasreee/raslib",
-  "private": true,
   "workspaces": {
     "packages": [
-      "packages/*"
+      "packages/*",
+      "examples"
     ],
     "nohoist": [
       "@emotion/core/types",
       "**/@emotion/core/types"
     ]
   },
+  "private": true,
+  "main": "babel.config.js",
   "preconstruct": {
     "packages": [
       "packages/*"
@@ -19,6 +21,7 @@
   "author": "Lesley Chang",
   "license": "MIT",
   "scripts": {
+    "dev": "tsdx watch",
     "pkg": "manypkg run",
     "fix:pkgs": "manypkg fix",
     "version:pkgs": "changeset version",
@@ -58,6 +61,7 @@
     "@manypkg/cli": "^0.19.1",
     "@preconstruct/cli": "^2.1.5",
     "@react-hookz/web": "^12.0.0",
+    "@types/jest": "^27.0.3",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
@@ -75,17 +79,19 @@
     "eslint-plugin-sonarjs": "^0.10.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^7.0.4",
+    "jest": "^27.4.0",
+    "jest-environment-jsdom": "^27.4.0",
     "lint-staged": "^12.1.2",
     "prettier": "^2.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rimraf": "^3.0.2",
     "size-limit": "^7.0.3",
+    "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
     "typescript": "^4.5.2"
   },
   "description": "Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.",
-  "main": "babel.config.js",
   "directories": {
     "example": "example"
   },

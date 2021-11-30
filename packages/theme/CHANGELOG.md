@@ -1,5 +1,11 @@
 # @rasreee/theme
 
+## 9.2.0
+
+### Minor Changes
+
+- fix theme color types
+
 ## 9.1.0
 
 ### Minor Changes

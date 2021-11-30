@@ -1,4 +1,6 @@
 {
+  "exclude": ["node_modules"],
+  "include": ["*.ts"],
   "compilerOptions": {
     "allowSyntheticDefaultImports": false,
     "target": "es5",
@@ -13,6 +15,10 @@
     "preserveConstEnums": true,
     "sourceMap": true,
     "lib": ["es2015", "es2016", "dom"],
-    "types": ["node"]
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@rasreee/*": ["../packages/*"]
+    }
   }
 }

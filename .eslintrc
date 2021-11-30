@@ -155,6 +155,7 @@
           }
         ],
         "no-extra-semi": "error",
+        "spaced-comment": "off",
         "space-before-blocks": "error",
         "space-before-function-paren": [
           "error",

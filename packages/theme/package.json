@@ -1,11 +1,15 @@
 {
   "name": "@rasreee/theme",
-  "version": "9.1.0",
+  "version": "9.2.0",
   "author": "Lesley Chang",
   "license": "MIT",
   "main": "dist/rasreee-theme.cjs.js",
   "types": "dist/rasreee-theme.cjs.d.ts",
   "module": "dist/rasreee-theme.esm.js",
+  "scripts": {
+    "test": "jest --maxWorkers=50% --no-cache",
+    "test:watch": "jest --maxWorkers=25% --watch --onlyChanged"
+  },
   "files": [
     "dist",
     "src"

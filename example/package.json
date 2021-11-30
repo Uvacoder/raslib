@@ -8,17 +8,20 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "parcel": "2.0.1",
     "react-app-polyfill": "^1.0.0"
   },
   "alias": {
     "react": "../node_modules/react",
     "react-dom": "../node_modules/react-dom/profiling",
-    "scheduler/tracing": "../node_modules/scheduler/tracing-profiling"
+    "scheduler/tracing": "../node_modules/scheduler/tracing-profiling",
+    "@rasreee/theme": "../node_modules/@rasreee/theme",
+    "@rasreee/theme-tools": "../node_modules/@rasreee/theme-tools",
+    "@rasreee/utils": "../node_modules/@rasreee/utils"
   },
   "devDependencies": {
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.8.4",
-    "parcel": "^2.0.1",
     "typescript": "^3.4.5"
   }
 }

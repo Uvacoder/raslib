@@ -6,6 +6,7 @@
     "target": "es5",
     "module": "ESNext",
     "lib": ["dom", "esnext"],
+    "types": ["jest"],
     "importHelpers": true,
     "isolatedModules": true,
     // output .d.ts declaration files for consumers
