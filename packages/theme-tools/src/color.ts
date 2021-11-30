@@ -16,9 +16,9 @@ export const darken = (color: string, amount: number) => {
  * @param color - the color in hex, rgb, or hsl
  * @param amount - the amount to lighten (0-100)
  */
-export const lighten = (color: string, amount: number) => () =>
-  new TinyColor(color).lighten(amount).toHexString()
-
+export const lighten = (color: string, amount: number) => {
+  return new TinyColor(color).lighten(amount).toHexString()
+}
 /**
  * Get a path for getting a color from the theme object
  * @param key - the name of the color
