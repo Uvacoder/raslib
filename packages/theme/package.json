@@ -1,6 +1,6 @@
 {
   "name": "@rasreee/theme",
-  "version": "9.2.0",
+  "version": "9.3.0",
   "author": "Lesley Chang",
   "license": "MIT",
   "main": "dist/rasreee-theme.cjs.js",

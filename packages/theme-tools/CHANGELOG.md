@@ -1,5 +1,17 @@
 # @rasreee/theme-tools
 
+## 7.2.0
+
+### Minor Changes
+
+- setup testing and stuff
+
+### Patch Changes
+
+- Updated dependencies
+  - @rasreee/theme@9.3.0
+  - @rasreee/utils@2.1.0
+
 ## 7.1.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @rasreee/utils
 
+## 2.1.0
+
+### Minor Changes
+
+- setup testing and stuff
+
 ## 2.0.2
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@rasreee/theme-tools",
-  "version": "7.1.0",
+  "version": "7.2.0",
   "sideEffects": false,
   "main": "dist/rasreee-theme-tools.cjs.js",
   "module": "dist/rasreee-theme-tools.esm.js",
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.0",
-    "@rasreee/theme": "^9.0.1",
-    "@rasreee/utils": "^2.0.2"
+    "@rasreee/theme": "^9.3.0",
+    "@rasreee/utils": "^2.1.0"
   }
 }

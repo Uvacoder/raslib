@@ -1,5 +1,11 @@
 # @rasreee/theme
 
+## 9.3.0
+
+### Minor Changes
+
+- setup testing and stuff
+
 ## 9.2.0
 
 ### Minor Changes
