@@ -30,12 +30,14 @@
     "clean-dist": "manypkg exec rimraf dist",
     "test": "tsdx test --passWithNoTests",
     "install:deps": "yarn install --frozen-lockfile",
-    "release": "yarn install:deps && yarn build && yarn changeset publish",
+    "begin-changeset": "yarn build && yarn changeset",
+    "release": "yarn changeset publish",
     "prepare": "husky install",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "format": "yarn lint --fix",
-    "lint": "eslint packages/**/src/ --ext .ts,.tsx --config .eslintrc"
+    "lint": "eslint packages/**/src/ --ext .ts,.tsx --config .eslintrc",
+    "increment-and-release": "yarn version:pkgs && yarn release"
   },
   "resolutions": {
     "**/react": "17.0.2",

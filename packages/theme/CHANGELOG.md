@@ -1,5 +1,11 @@
 # @rasreee/theme
 
+## 9.1.0
+
+### Minor Changes
+
+- add theme helpers
+
 ## 9.0.1
 
 ### Patch Changes

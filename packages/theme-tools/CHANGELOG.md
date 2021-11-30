@@ -1,5 +1,12 @@
 # @rasreee/theme-tools
 
+## 7.1.0
+
+### Minor Changes
+
+- fix lighten color util
+- fix lighten color util
+
 ## 7.0.4
 
 ### Patch Changes
