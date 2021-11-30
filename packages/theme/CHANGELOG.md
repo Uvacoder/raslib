@@ -80,7 +80,7 @@
 
 ### Major Changes
 
-- combine palette and brand theme colors into one object
+- combine BaseColors and brand theme colors into one object
 
 ## 7.0.0
 

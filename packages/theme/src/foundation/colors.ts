@@ -1,16 +1,10 @@
-import { defaultColorConfig } from './default-colors'
-import { generatePalette } from './palette'
+import { defaultColorConfig, generateBaseColors } from '@rasreee/theme-tools'
 
-const palette = generatePalette<typeof defaultColorConfig, keyof typeof defaultColorConfig>(
+const baseColors = generateBaseColors<typeof defaultColorConfig, keyof typeof defaultColorConfig>(
   defaultColorConfig
 )
 
 /* Branding colors */
-const notifications = {
-  danger: '#F16063',
-  warning: '#FFAB2B',
-  success: '#6DD230'
-}
 
 const colorTheme = {
   initialModeName: 'dark',
@@ -35,6 +29,7 @@ const colorTheme = {
 }
 
 export const colors = {
-  ...palette,
+  _base: baseColors,
+  ...colorTheme.modes.dark,
   ...colorTheme
 }

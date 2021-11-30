@@ -1,4 +1,4 @@
-export * from './default'
-export * from './palette'
+export * from './base-colors'
+export * from './default-colors'
 export * from './types'
 export * from './utils'

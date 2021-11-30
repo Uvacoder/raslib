@@ -18,7 +18,6 @@ module.exports = {
         'import',
         'react',
         'react-hooks',
-        'sonarjs',
         'simple-import-sort',
         'prettier'
       ],
@@ -102,16 +101,7 @@ module.exports = {
         'operator-linebreak': 'error',
         'linebreak-style': 'error',
         'object-shorthand': 'error',
-        'object-curly-newline': [
-          'error',
-          {
-            ImportDeclaration: 'never',
-            ExportDeclaration: {
-              multiline: true,
-              minProperties: 3
-            }
-          }
-        ],
+        'object-curly-newline': 0,
         'object-curly-spacing': ['error', 'always'],
         'object-property-newline': [
           'error',

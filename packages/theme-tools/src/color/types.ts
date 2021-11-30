@@ -4,6 +4,6 @@ export type ColorLevel = typeof colorLevels[number]
 
 export type ColorScale = Record<ColorLevel, string>
 
-export type Palette<ColorKey extends string = any> = Record<`${ColorKey}${ColorLevel}`, string>
+export type BaseColors<ColorKey extends string = any> = Record<`${ColorKey}${ColorLevel}`, string>
 
-export type PaletteKey<ColorKey extends string> = `${ColorKey}${ColorLevel}`
+export type BaseColorsKey<ColorKey extends string> = `${ColorKey}${ColorLevel}`

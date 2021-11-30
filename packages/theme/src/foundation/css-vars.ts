@@ -1,4 +1,4 @@
-export const colorCssVariable = {
+export const cssVars = {
   '--color-gray-50': '#f9fafb',
   '--color-gray-100': '#f3f4f6',
   '--color-gray-200': '#e5e7eb',
