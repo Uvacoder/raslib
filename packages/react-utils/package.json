@@ -1,6 +1,6 @@
 {
   "name": "@rasreee/react-utils",
-  "version": "9.3.0",
+  "version": "10.0.0",
   "author": "Lesley Chang",
   "license": "MIT",
   "main": "dist/rasreee-react-utils.cjs.js",

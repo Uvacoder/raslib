@@ -1,5 +1,11 @@
 # @rasreee/theme
 
+## 10.0.0
+
+### Major Changes
+
+- move hooks into react-utils package
+
 ## 9.3.0
 
 ### Minor Changes
