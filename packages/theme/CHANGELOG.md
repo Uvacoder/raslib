@@ -1,5 +1,11 @@
 # @rasreee/theme
 
+## 13.0.0
+
+### Major Changes
+
+- deprecate theme-tools
+
 ## 12.0.0
 
 ### Major Changes

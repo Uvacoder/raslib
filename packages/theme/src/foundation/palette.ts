@@ -1,4 +1,4 @@
-import { ColorLevel, ColorScale, Palette } from './types'
+import { ColorLevel, ColorScale } from './color.types'
 
 export type Key = string | number | symbol
 
@@ -15,9 +15,9 @@ function createEntriesForColorKey<Name extends string>(
   return result
 }
 
-export function generatePalette<C extends Record<Key, ColorScale>, K extends string = string>(
+export function generatePalette<C extends Record<K, ColorScale>, K extends string = string>(
   config: C
-): Palette<K> {
+): Record<`${K}${ColorLevel}`, string> {
   let colorPathMap = {} as Record<`${K}${ColorLevel}`, string>
 
   Object.entries(config).forEach(([colorName, colorScale]) => {

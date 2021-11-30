@@ -1,5 +1,3 @@
-import { Theme } from './theme'
-
 export const colorCssVariable = {
   '--color-gray-50': '#f9fafb',
   '--color-gray-100': '#f3f4f6',
@@ -48,9 +46,3 @@ export const colorCssVariable = {
   '--color-success': '#6DD230',
   '--color-dark': '#252631'
 }
-
-function getCssVarKey<Token extends keyof Theme>(token: Token, value: string) {
-  return `--${token}-${value}` as const
-}
-
-export type CssVarKey = ReturnType<typeof getCssVarKey>

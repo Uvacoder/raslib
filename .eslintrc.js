@@ -16,7 +16,6 @@ module.exports = {
       plugins: [
         '@typescript-eslint',
         'import',
-        'unused-imports',
         'react',
         'react-hooks',
         'sonarjs',
@@ -68,15 +67,6 @@ module.exports = {
         '@typescript-eslint/no-throw-literal': 'off',
         '@typescript-eslint/no-unused-expressions': 0,
         '@typescript-eslint/no-unused-vars': 0,
-        'unused-imports/no-unused-imports': 'error',
-        'unused-imports/no-unused-vars': 0,
-        // "unused-imports/no-unused-vars": [
-        //   "error",
-        //   {
-        //     "argsIgnorePattern": "^_"
-        //   }
-        // ],
-        // Formatting
         'arrow-spacing': 'error',
         'block-scoped-var': 'error',
         'block-spacing': 'error',

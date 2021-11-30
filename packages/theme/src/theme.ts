@@ -1,12 +1,19 @@
-import { radii } from './border'
-import { colors } from './colors'
-import { fontSizes, fontWeights } from './typography'
+import {
+  colors as initialColors,
+  defaultColorConfig,
+  generatePalette,
+  radii,
+  typography
+} from './foundation'
+
+const palette = generatePalette<typeof defaultColorConfig, keyof typeof defaultColorConfig>(
+  defaultColorConfig
+)
+
+const colors = { ...initialColors, ...palette }
 
 export const theme = {
   colors,
-  fontWeights,
-  fontSizes,
-  radii
+  radii,
+  ...typography
 }
-
-export type Theme = typeof theme
