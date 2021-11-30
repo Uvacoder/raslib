@@ -35,3 +35,8 @@ export function getColor<ThemeType extends { colors: Dict } = { colors: Dict }>(
 
   return isValid ? hex : fallback
 }
+export const gray = (level: number): string => {
+  const val = `hsl(0%, 0%, ${level}%)`
+
+  return val
+}

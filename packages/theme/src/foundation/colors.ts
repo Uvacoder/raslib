@@ -1,9 +1,8 @@
-import { defaultColorConfig, generateBaseColors } from '@rasreee/theme-tools'
+import { ColorLevel, defaultColorConfig, generateBaseColors } from '@rasreee/theme-tools'
 
 const baseColors = generateBaseColors<typeof defaultColorConfig, keyof typeof defaultColorConfig>(
   defaultColorConfig
 )
-
 /* Branding colors */
 
 const colorTheme = {

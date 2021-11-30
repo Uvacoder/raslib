@@ -1,4 +1,12 @@
 import { colors, theme as baseTheme, BaseTheme } from '@rasreee/theme'
+import { lighten } from '@rasreee/theme-tools'
+
+export const gray = (level = 900): string => {
+  if (level === 0) return '#fff'
+  const val = `#060606`
+
+  return lighten(val, (900 - level) / 10)
+}
 
 const buttons = {
   primary: {
@@ -9,7 +17,7 @@ const buttons = {
     background: colors.secondary,
     color: colors.text,
   },
-  outlined: {
+  tertiary: {
     background: colors.secondary,
     color: colors.text,
   },

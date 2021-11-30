@@ -13,14 +13,15 @@ const Home = () => {
       <Button variant="primary" onClick={() => console.log('CLICK!')}>
         Click me
       </Button>
-      <Button variant="secondary" disabled onClick={() => console.log('CLICK!')}>
-        disabled
-      </Button>
       <Button variant="secondary" onClick={() => console.log('CLICK!')}>
-        Click me
+        click me
       </Button>
-      <Button variant="outlined" onClick={() => console.log('CLICK!')}>
-        Click me
+
+      <Button variant="tertiary" onClick={() => console.log('CLICK!')}>
+        tertiary
+      </Button>
+      <Button disabled onClick={() => console.log('CLICK!')}>
+        disabled
       </Button>
     </div>
   )

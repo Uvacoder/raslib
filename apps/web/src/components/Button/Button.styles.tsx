@@ -1,26 +1,25 @@
 import { css, Theme } from '@emotion/react'
 import { ThemeColorKey } from '@rasreee/theme'
 import { BaseColors, darken, getColor, StyleAlias } from '@rasreee/theme-tools'
+import { gray } from '@styles/theme'
 
 export const buttonVariantStyles = (variant: ButtonVariant) => (theme: Theme) =>
   [
-    variant === 'primary' && [
+    variant === 'primary' &&
       css`
         color: white;
-        background: ${theme.colors._base.blue500};
+        background: ${theme.colors.primary};
         border-color: transparent;
-      `,
-      css`
+
         &:not(:disabled):hover {
-          background: ${theme.colors.primary};
+          background: ${darken(theme.colors.primary, 15)};
         }
 
         &:active {
-          background: ${theme.colors.primary};
-          color: white;
+          background: ${darken(theme.colors.primary, 25)};
         }
       `,
-    ],
+    ,
     variant === 'disabled' && [
       css`
         background: ${theme.colors._base.gray300};
@@ -29,36 +28,29 @@ export const buttonVariantStyles = (variant: ButtonVariant) => (theme: Theme) =>
     ],
     variant === 'secondary' && [
       css`
-        color: ${theme.colors._base.gray700};
-        background: ${theme.colors._base.gray200};
-      `,
-      css`
+        color: ${theme.colors.text};
+        background: ${theme.colors.secondary};
+
         &:not(:disabled):hover {
-          background: ${darken(theme.colors._base.gray200, 20)};
-          color: ${darken(theme.colors._base.gray700, 10)};
+          background: ${darken(theme.colors.secondary, 15)};
         }
 
         &:active {
-          background: ${darken(theme.colors._base.gray200, 30)};
-          color: ${darken(theme.colors._base.gray700, 20)};
+          background: ${darken(theme.colors.secondary, 30)};
         }
       `,
     ],
-    variant === 'outlined' && [
+    variant === 'tertiary' && [
       css`
-        color: ${theme.colors.text};
-        background: ${theme.colors.background};
-        border: 1.75px solid ${theme.colors.text};
+        background: ${gray(0)};
+        color: ${theme.colors.background};
 
         &:not(:disabled):hover {
-          background: ${darken(theme.colors.background, 5)};
-          color: ${darken(theme.colors.text, 10)};
-          border: 1.75px solid ${theme.colors.text};
+          background-color: ${gray(50)};
         }
 
         &:active {
-          background: ${darken(theme.colors.background, 30)};
-          color: ${darken(theme.colors.text, 20)};
+          background-color: ${gray(200)};
         }
       `,
     ],
@@ -78,6 +70,11 @@ export const baseStyles = css`
     appearance: none;
   }
   cursor: pointer;
+
+  &:disabled {
+    color: var(--color-gray-600);
+    background: var(--color-gray-300);
+  }
 `
 
-export type ButtonVariant = 'primary' | 'secondary' | 'outlined' | 'disabled'
+export type ButtonVariant = 'primary' | 'secondary' | 'tertiary' | 'disabled'
