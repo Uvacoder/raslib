@@ -1,5 +1,29 @@
 # @rasreee/theme
 
+## 12.0.0
+
+### Major Changes
+
+- fix build
+
+### Patch Changes
+
+- Updated dependencies
+  - @rasreee/theme-tools@10.0.0
+
+## 11.0.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @rasreee/theme-tools@9.0.0
+
+## 11.0.0
+
+### Major Changes
+
+- script for generating color configs
+
 ## 10.0.0
 
 ### Major Changes

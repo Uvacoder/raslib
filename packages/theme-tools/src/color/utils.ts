@@ -1,7 +1,6 @@
 import { TinyColor } from '@ctrl/tinycolor'
 import { Dict, get } from '@rasreee/utils'
 
-import { ColorLevel } from './types'
 /**
  * Darken a specified color
  * @param color - the color in hex, rgb, or hsl
@@ -19,19 +18,6 @@ export const darken = (color: string, amount: number) => {
 export const lighten = (color: string, amount: number) => {
   return new TinyColor(color).lighten(amount).toHexString()
 }
-/**
- * Get a path for getting a color from the theme object
- * @param key - the name of the color
- * @param level - the scale of the color you want in terms of lightness / darkness
- */
-function getColorConfigPath<ColorConfigKey extends string = string>(
-  key: ColorConfigKey,
-  scale: ColorLevel
-) {
-  return `${key}.${scale}` as const
-}
-
-export type ColorConfigPath = ReturnType<typeof getColorConfigPath>
 
 /**
  * Get the color raw value from theme

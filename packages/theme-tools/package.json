@@ -1,6 +1,6 @@
 {
   "name": "@rasreee/theme-tools",
-  "version": "7.2.1",
+  "version": "10.0.0",
   "sideEffects": false,
   "main": "dist/rasreee-theme-tools.cjs.js",
   "module": "dist/rasreee-theme-tools.esm.js",
@@ -11,15 +11,12 @@
   ],
   "author": "Lesley Chang",
   "license": "MIT",
-  "alias": {
-    "@rasreee/theme": "../theme"
-  },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.0",
-    "@rasreee/theme": "^10.0.0",
     "@rasreee/utils": "^2.1.0"
-  }
+  },
+  "devDependencies": {}
 }

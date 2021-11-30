@@ -1,3 +1,5 @@
+import { colors } from './colors'
+
 export const fontWeights = {
   thin: 100,
   extralight: 200,
@@ -23,4 +25,8 @@ export const fontSizes = {
   '5xl': '3rem',
   '6xl': '3.75rem',
   '7xl': '4.5rem'
+}
+
+export const textColors = {
+  body: { dark: colors.gray100, muted: colors.gray600, light: colors.gray900 }
 }

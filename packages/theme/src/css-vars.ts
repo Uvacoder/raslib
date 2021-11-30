@@ -1,5 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import { ThemeToken } from '@rasreee/theme/src/theme/types'
+import { Theme } from './theme'
 
 export const colorCssVariable = {
   '--color-gray-50': '#f9fafb',
@@ -50,7 +49,7 @@ export const colorCssVariable = {
   '--color-dark': '#252631'
 }
 
-const getCssVarKey = (token: ThemeToken, value: string) => {
+function getCssVarKey<Token extends keyof Theme>(token: Token, value: string) {
   return `--${token}-${value}` as const
 }
 
