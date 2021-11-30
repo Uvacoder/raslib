@@ -1,9 +1,10 @@
+import { css } from '@emotion/react'
 import styled from '@styles/types'
 import { Styling } from '@types'
 import * as React from 'react'
 import { ReactNode } from 'react'
 
-import { baseStyles, ButtonVariant, disabledStyles, getButtonVariantStyles } from './Button.styles'
+import { baseStyles, ButtonVariant, buttonVariantStyles, disabledStyles } from './Button.styles'
 
 export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
@@ -14,8 +15,11 @@ export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
 }
 
 const StyledButton = styled(({ disabled = false, ...rest }) => <button {...rest} disabled={disabled} />)<IButtonProps>`
-  ${baseStyles}
-  ${({ variant = 'primary', ...props }) => getButtonVariantStyles(props.theme, variant)}
+  ${baseStyles};
+
+  ${({ variant = 'primary', theme, ...props }) => css`
+    ${buttonVariantStyles[variant](theme)}
+  `}
 
   &:disabled {
     ${(props) => disabledStyles(props.theme)}

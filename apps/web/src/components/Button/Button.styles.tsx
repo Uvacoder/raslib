@@ -1,24 +1,66 @@
 import { css, Theme } from '@emotion/react'
-import { darken, lighten, ThemeColorKey } from '@rasreee/theme'
-import { getColor, StyleAlias } from '@rasreee/theme-tools'
+import { ThemeColorKey } from '@rasreee/theme'
+import { BaseColors, darken, getColor, StyleAlias } from '@rasreee/theme-tools'
 
-const variants: Record<ButtonVariant, { [alias in StyleAlias]: string }> = {
-  primary: {
-    txt: 'white',
-    bg: 'blue500',
-  },
-  disabled: {
-    txt: 'gray600',
-    bg: 'gray200',
-  },
-  secondary: {
-    txt: 'gray700',
-    bg: 'gray200',
-  },
-  outlined: {
-    txt: 'gray700',
-    bg: 'white',
-  },
+export const buttonVariantStyles: Record<ButtonVariant, any> = {
+  primary: (theme: Theme) => [
+    css`
+      color: white;
+      background: ${theme.colors._base.blue500};
+      border-color: transparent;
+    `,
+    css`
+      &:not(:disabled):hover {
+        background: ${theme.colors.primary};
+      }
+
+      &:active {
+        background: ${theme.colors.primary};
+        color: white;
+      }
+    `,
+  ],
+  disabled: (theme: Theme) => [
+    css`
+      background: ${theme.colors._base.gray300};
+      color: ${theme.colors._base.gray600};
+    `,
+  ],
+  secondary: (theme: Theme) => [
+    css`
+      color: ${theme.colors._base.gray700};
+      background: ${theme.colors._base.gray200};
+    `,
+    css`
+      &:not(:disabled):hover {
+        background: ${darken(theme.colors._base.gray200, 20)};
+        color: ${darken(theme.colors._base.gray700, 10)};
+      }
+
+      &:active {
+        background: ${darken(theme.colors._base.gray200, 30)};
+        color: ${darken(theme.colors._base.gray700, 20)};
+      }
+    `,
+  ],
+  outlined: (theme: Theme) => [
+    css`
+      color: ${theme.colors.text};
+      background: ${theme.colors.background};
+      border: 1.75px solid ${theme.colors.text};
+
+      &:not(:disabled):hover {
+        background: ${darken(theme.colors.background, 5)};
+        color: ${darken(theme.colors.text, 10)};
+        border: 1.75px solid ${theme.colors.text};
+      }
+
+      &:active {
+        background: ${darken(theme.colors.background, 30)};
+        color: ${darken(theme.colors.text, 20)};
+      }
+    `,
+  ],
 }
 
 export const baseStyles = css`
@@ -39,86 +81,8 @@ export const baseStyles = css`
 
 export const disabledStyles = (theme: Theme) => css`
   cursor: default;
-  background: ${theme.colors[variants.disabled.bg as ThemeColorKey]};
-  color: ${theme.colors[variants.disabled.bg as ThemeColorKey]};
+  background: ${theme.colors[buttonVariantStyles.disabled.bg as ThemeColorKey]};
+  color: ${theme.colors[buttonVariantStyles.disabled.bg as ThemeColorKey]};
 `
-export const primaryVariantStyles = (theme: Theme) =>
-  css`
-    background: ${theme.colors.black};
-    border-color: transparent;
-    color: white;
-
-    &:not(:disabled):hover {
-      background: ${getColor(theme, 'blue700')};
-    }
-
-    &:active {
-      background: ${getColor(theme, 'blue900')};
-      color: white;
-    }
-  `
-export const secondaryVariantStyles = (theme: Theme) => {
-  // const bg = theme.colors._base[variants.secondary.bg]
-  // const txt = theme.colors._base[variants.secondary.txt]
-  const bg = theme.colors.white
-  const txt = theme.colors.black
-
-  return css`
-    color: ${txt};
-    background: ${bg};
-    border: transparent;
-
-    &:not(:disabled):hover {
-      background: ${darken(bg, 20)};
-      color: ${darken(txt, 10)};
-    }
-
-    &:active {
-      background: ${darken(bg, 30)};
-      color: ${darken(txt, 20)};
-    }
-  `
-}
-
-export const outlinedVariantStyles = (theme: Theme) => {
-  // const bg = theme.colors._base[variants.secondary.bg]
-  // const txt = theme.colors._base[variants.secondary.txt]
-  const bg = theme.colors.white
-  const txt = theme.colors.black
-  const outline = theme.colors.black
-
-  return css`
-    color: ${txt};
-    background: ${bg};
-    border: 1.75px solid ${outline};
-
-    &:not(:disabled):hover {
-      background: ${darken(bg, 5)};
-      color: ${darken(txt, 10)};
-      border: 1.75px solid ${outline};
-    }
-
-    &:active {
-      background: ${darken(bg, 30)};
-      color: ${darken(txt, 20)};
-    }
-  `
-}
 
 export type ButtonVariant = 'primary' | 'secondary' | 'outlined' | 'disabled'
-
-export const getButtonVariantStyles = (theme: Theme, variant: ButtonVariant) => {
-  let styles = css``
-  if (variant === 'primary') {
-    styles = primaryVariantStyles(theme)
-  }
-
-  if (variant === 'secondary') {
-    styles = secondaryVariantStyles(theme)
-  }
-  if (variant === 'outlined') {
-    styles = outlinedVariantStyles(theme)
-  }
-
-  return styles
-}
