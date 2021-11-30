@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import { isTheme } from '@rasreee/theme'
 import styled from '@styles/types'
-import { Styling } from '@types/emotion'
+import { Styling } from '@styles/emotion'
 import * as React from 'react'
 import { ReactNode } from 'react'
 
