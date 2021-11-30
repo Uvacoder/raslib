@@ -1,6 +1,0 @@
-export * from './border'
-export * from './colors'
-export * from './theme'
-export * from './types'
-export * from './typography'
-export * from './utils'

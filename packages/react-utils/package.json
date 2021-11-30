@@ -1,0 +1,26 @@
+{
+  "name": "@rasreee/react-utils",
+  "version": "9.3.0",
+  "author": "Lesley Chang",
+  "license": "MIT",
+  "main": "dist/rasreee-react-utils.cjs.js",
+  "types": "dist/rasreee-react-utils.cjs.d.ts",
+  "module": "dist/rasreee-react-utils.esm.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@react-hookz/web": "^12.0.0"
+  },
+  "devDependencies": {
+    "react": "^17.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.6"
+  }
+}
