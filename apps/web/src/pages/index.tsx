@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import { Button } from 'components/Button/Button'
 
-const Home = () => {
+const Buttons = () => {
   return (
     <div
       css={css`
@@ -26,4 +26,25 @@ const Home = () => {
     </div>
   )
 }
+
+const Home = () => {
+  return (
+    <div
+      css={css`
+        display: flex;
+        gap: 3rem;
+      `}
+    >
+      <Buttons />
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+        `}
+      ></div>
+    </div>
+  )
+}
+
 export default Home

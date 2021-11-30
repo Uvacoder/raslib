@@ -31,9 +31,12 @@
     "isolatedModules": true,
     "baseUrl": "src",
     "paths": {
-      "@styles/*": ["./styles/*"]
+      "@styles/*": ["./styles/*"],
+      "@types/*": ["./types/*"],
+      "@rasreee/theme": ["../../packages/@rasreee/theme/src"],
+      "@rasreee/theme-tools": ["../../packages/@rasreee/theme-tools/src"]
     }
   },
   "exclude": ["node_modules", ".next"],
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "common.d.ts"]
+  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "common.d.ts"]
 }

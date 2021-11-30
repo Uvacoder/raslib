@@ -1,5 +1,4 @@
 import { css } from '@emotion/react'
-import { Styling } from '@types'
 import * as React from 'react'
 
 const baseStyle = css`

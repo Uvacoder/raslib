@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react'
+import { getColor } from '@rasreee/theme-tools'
 import { clickableBgStyles, gray } from '@styles/mixins'
 
 export const buttonVariantStyles = (variant: ButtonVariant) => (theme: Theme) =>
@@ -6,30 +7,29 @@ export const buttonVariantStyles = (variant: ButtonVariant) => (theme: Theme) =>
     variant === 'primary' &&
       css`
         color: white;
-        background: ${theme.colors.primary};
+        background: ${getColor(theme, 'colors.primary')};
         border-color: transparent;
 
-        ${clickableBgStyles(theme.colors.primary)};
+        ${clickableBgStyles(getColor(theme, 'colors.primary'))};
       `,
     ,
     variant === 'disabled' && [
       css`
-        background: ${theme.colors._base.gray300};
-        color: ${theme.colors._base.gray600};
+        background: ${getColor(theme, `gray.300`)};
+        color: ${getColor(theme, `gray.600`)};
       `,
     ],
     variant === 'secondary' && [
       css`
-        color: ${theme.colors.text};
-        background: ${theme.colors.secondary};
-        ${clickableBgStyles(theme.colors.secondary)};
+        color: ${getColor(theme, 'colors.text')};
+        background: ${getColor(theme, 'colors.secondary')};
+        ${clickableBgStyles(getColor(theme, 'colors.secondary'))};
       `,
     ],
     variant === 'tertiary' && [
       css`
-        background: ${gray(0)};
-        color: ${theme.colors.background};
-        ${clickableBgStyles(gray(0))};
+        color: ${getColor(theme, 'colors.text')};
+        ${clickableBgStyles(getColor(theme, 'colors.background'))};
       `,
     ],
   ]

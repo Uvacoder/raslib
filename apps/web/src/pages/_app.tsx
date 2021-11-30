@@ -9,7 +9,7 @@ const App = ({ Component, pageProps }: AppProps) => (
     <ThemeProvider theme={theme}>
       <div
         css={css`
-          background-color: var(--color-gray-900);
+          background-color: ${getColor(theme, 'colors.background')};
           height: 100vh;
           width: 100%;
           padding: 2rem;

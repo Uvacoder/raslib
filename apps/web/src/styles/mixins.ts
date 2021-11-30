@@ -3,6 +3,7 @@ import { darken, lighten } from '@rasreee/theme-tools'
 
 export const clickableBgStyles = (initialBg: string) => css`
   background-color: ${initialBg};
+
   &:not(:disabled):hover {
     background: ${darken(initialBg, 15)};
   }
