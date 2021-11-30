@@ -1,7 +1,5 @@
 import { css, Theme } from '@emotion/react'
-import { ThemeColorKey } from '@rasreee/theme'
-import { BaseColors, darken, getColor, StyleAlias } from '@rasreee/theme-tools'
-import { gray } from '@styles/theme'
+import { clickableBgStyles, gray } from '@styles/mixins'
 
 export const buttonVariantStyles = (variant: ButtonVariant) => (theme: Theme) =>
   [
@@ -11,13 +9,7 @@ export const buttonVariantStyles = (variant: ButtonVariant) => (theme: Theme) =>
         background: ${theme.colors.primary};
         border-color: transparent;
 
-        &:not(:disabled):hover {
-          background: ${darken(theme.colors.primary, 15)};
-        }
-
-        &:active {
-          background: ${darken(theme.colors.primary, 25)};
-        }
+        ${clickableBgStyles(theme.colors.primary)};
       `,
     ,
     variant === 'disabled' && [
@@ -30,28 +22,14 @@ export const buttonVariantStyles = (variant: ButtonVariant) => (theme: Theme) =>
       css`
         color: ${theme.colors.text};
         background: ${theme.colors.secondary};
-
-        &:not(:disabled):hover {
-          background: ${darken(theme.colors.secondary, 15)};
-        }
-
-        &:active {
-          background: ${darken(theme.colors.secondary, 30)};
-        }
+        ${clickableBgStyles(theme.colors.secondary)};
       `,
     ],
     variant === 'tertiary' && [
       css`
         background: ${gray(0)};
         color: ${theme.colors.background};
-
-        &:not(:disabled):hover {
-          background-color: ${gray(50)};
-        }
-
-        &:active {
-          background-color: ${gray(200)};
-        }
+        ${clickableBgStyles(gray(0))};
       `,
     ],
   ]
